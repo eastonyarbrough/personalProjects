@@ -1,6 +1,6 @@
 //WELCOME TO THE GREEN GLASS DOOR!
 const readline = require("readline-sync");
-userInput = readline.question("Enter something you think could enter the Green Glass Door: ");
+userInput = readline.question("Input something you think could enter the Green Glass Door: ");
 
 function grnGlassDoor(str)
 {
@@ -13,7 +13,7 @@ function grnGlassDoor(str)
         }
         if (i == str.length-1)
         {
-            console.log("No! " + userInput + " can NOT enter the Green Glass Door!");
+            console.log("No! " + str + " can NOT enter the Green Glass Door!");
             break;
         }
     }
