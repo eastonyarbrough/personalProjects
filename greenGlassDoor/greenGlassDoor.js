@@ -14,6 +14,7 @@ function grnGlassDoor(str)
         if (i == str.length-1)
         {
             console.log("No! " + userInput + " can NOT enter the Green Glass Door!");
+            break;
         }
     }
 }
