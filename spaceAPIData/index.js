@@ -38,7 +38,7 @@ fetch("http://api.open-notify.org/astros.json")
     .catch(err => console.log(err))
 
 //International Space Station tracker
-// getISSLocation();
+getISSLocation();
 function getISSLocation() {
     fetch("http://api.open-notify.org/iss-now.json")
         .then(res => res.json())
@@ -61,4 +61,4 @@ function getISSLocation() {
         .catch(err => console.log(err))
 }
 
-// setInterval(getISSLocation, 1000);
+setInterval(getISSLocation, 1000);
