@@ -45,8 +45,9 @@ function getISSLocation() {
         .then(res => {
             let lat = res.iss_position.latitude;
             let long = res.iss_position.longitude;
-            axios.get(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`)
+            axios.get(`https://api.bigdatacloud.net/data/reverse-geocode?latitude=${lat}&longitude=${long}&localityLanguage=en&key=06e8afee0a1b477587dbac8906f631a0`)
                 .then(result => {
+                    console.log(result);
                     if (result.data.city !== "" && result.data.principalSubdivision !== "" && result.data.countryName !== "") {
                         document.querySelector("#local").textContent = `In space over: ${result.data.city}, ${result.data.principalSubdivision}, ${result.data.countryName}`;
                     }
