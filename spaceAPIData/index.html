@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space Data</title>
+        <link rel="stylesheet" href="style.css"></link>
+    </head>
+    <body>
+        <div id="infoGrid">
+            <div id="people" class="infoFlex">
+                <h2>People currently in space:</h2>
+                <p id="iss"></p>
+                <p id="shenzhou13"></p>
+            </div>
+            <div id="issLocal" class="infoFlex">
+                <h2>Current I.S.S. Location</h2>
+                <p id="local"></p>
+            </div>
+        </div>
+        <main id="solarFlex">
+            <h2>Scale model of the solar system</h2>
+            <img src="images/pluto.png" id="pluto" class="planet">
+            <img src="images/neptune.png" id="neptune" class="planet">
+            <img src="images/uranus.png" id="uranus" class="planet">
+            <img src="images/saturn.png" id="saturn" class="planet">
+            <img src="images/jupiter.png" id="jupiter" class="planet">
+            <img src="images/mars.png" id="mars" class="planet">
+            <img src="images/earth.png" id="earth" class="planet">
+            <img src="images/venus.png" id="venus" class="planet">
+            <img src="images/mercury.png" id="mercury" class="planet">
+            <img src="images/sun.png" id="sun" class="planet">
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

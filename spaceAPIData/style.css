@@ -1,0 +1,44 @@
+body {
+    background: url("https://i.ytimg.com/vi/GvkW7PDni40/maxresdefault.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#infoGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: bisque;
+}
+
+.infoFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: dimgrey;
+    opacity: 80%;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+#solarFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: bisque;
+}
+
+.planet {
+    margin: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    #infoGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
