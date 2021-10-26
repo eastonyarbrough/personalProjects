@@ -50,26 +50,26 @@ fetch("http://api.open-notify.org/astros.json")
     .catch(err => console.log(err))
 
 //International Space Station tracker
-// function getISSLocation() {
-//     fetch("http://api.open-notify.org/iss-now.json")
-//         .then(res => res.json())
-//         .then(res => {
-//             let lat = res.iss_position.latitude;
-//             let long = res.iss_position.longitude;
-//             axios.get(`https://api.bigdatacloud.net/data/reverse-geocode?latitude=${lat}&longitude=${long}&localityLanguage=en&key=06e8afee0a1b477587dbac8906f631a0`)
-//                 .then(result => {
-//                     if (result.data.city !== "" && result.data.principalSubdivision !== "" && result.data.countryName !== "") {
-//                         document.querySelector("#local").textContent = `${result.data.city}, ${result.data.principalSubdivision}, ${result.data.countryName}`;
-//                     }
-//                     else if (result.data.locality !== "" && result.data.countryName !== "") {
-//                         document.querySelector("#local").textContent = `${result.data.locality}, ${result.data.countryName}`;
-//                     }
-//                     else {
-//                         document.querySelector("#local").textContent = `${result.data.locality}`;
-//                     }
-//                 })
-//         })
-//         .catch(err => console.log(err))
-// }
+function getISSLocation() {
+    fetch("http://api.open-notify.org/iss-now.json")
+        .then(res => res.json())
+        .then(res => {
+            let lat = res.iss_position.latitude;
+            let long = res.iss_position.longitude;
+            axios.get(`https://api.bigdatacloud.net/data/reverse-geocode?latitude=${lat}&longitude=${long}&localityLanguage=en&key=06e8afee0a1b477587dbac8906f631a0`)
+                .then(result => {
+                    if (result.data.city !== "" && result.data.principalSubdivision !== "" && result.data.countryName !== "") {
+                        document.querySelector("#local").textContent = `${result.data.city}, ${result.data.principalSubdivision}, ${result.data.countryName}`;
+                    }
+                    else if (result.data.locality !== "" && result.data.countryName !== "") {
+                        document.querySelector("#local").textContent = `${result.data.locality}, ${result.data.countryName}`;
+                    }
+                    else {
+                        document.querySelector("#local").textContent = `${result.data.locality}`;
+                    }
+                })
+        })
+        .catch(err => console.log(err))
+}
 
-// setInterval(getISSLocation, 1000);
+setInterval(getISSLocation, 1000);
