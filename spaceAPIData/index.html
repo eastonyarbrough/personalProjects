@@ -8,29 +8,59 @@
         <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
-        <div id="infoGrid">
-            <div id="people" class="infoFlex">
+        <div id="topGrid">
+            <div id="people">
                 <h2>People currently in space:</h2>
+                <p>Aboard the International Space Station:</p>
                 <p id="iss"></p>
+                <p>Aboard Shenzhou 13:</p>
                 <p id="shenzhou13"></p>
             </div>
-            <div id="issLocal" class="infoFlex">
+            <div id="issLocal">
                 <h2>Current I.S.S. Location</h2>
-                <p id="local"></p>
+                <p>In space over:</p>
+                <p id="local">Loading please wait...</p>
             </div>
         </div>
         <main id="solarFlex">
             <h2>Scale model of the solar system</h2>
-            <img src="images/pluto.png" id="pluto" class="planet">
-            <img src="images/neptune.png" id="neptune" class="planet">
-            <img src="images/uranus.png" id="uranus" class="planet">
-            <img src="images/saturn.png" id="saturn" class="planet">
-            <img src="images/jupiter.png" id="jupiter" class="planet">
-            <img src="images/mars.png" id="mars" class="planet">
-            <img src="images/earth.png" id="earth" class="planet">
-            <img src="images/venus.png" id="venus" class="planet">
-            <img src="images/mercury.png" id="mercury" class="planet">
-            <img src="images/sun.png" id="sun" class="planet">
+            <div>
+                <img src="images/pluto.png" id="pluto" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/neptune.png" id="neptune" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/uranus.png" id="uranus" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/saturn.png" id="saturn" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/jupiter.png" id="jupiter" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/mars.png" id="mars" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/earth.png" id="earth" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/venus.png" id="venus" class="planet">
+                <label></label>
+            </div>
+            <div>
+                <img src="images/mercury.png" id="mercury" class="planet">
+                <label></label>
+            </div>
+            <img src="images/sun.png" id="sun">
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
         <script src="index.js"></script>

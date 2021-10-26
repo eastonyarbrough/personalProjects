@@ -6,22 +6,42 @@ body {
     background-size: cover;
 }
 
-#infoGrid {
+#topGrid {
     display: grid;
     grid-template-columns: 1fr;
     color: bisque;
 }
 
-.infoFlex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#people {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: fit-content, 1fr, 1fr;
     text-align: center;
     background-color: dimgrey;
     opacity: 80%;
     margin: 15px;
     border-radius: 20px;
+}
+
+#people>h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#issLocal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: fit-content, 1fr;
+    text-align: center;
+    background-color: dimgrey;
+    opacity: 80%;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+#issLocal>h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 #solarFlex {
@@ -32,12 +52,18 @@ body {
     color: bisque;
 }
 
+label {
+    position: absolute;
+    left: 56vw;
+}
+
 .planet {
+    position: static;
     margin: 15px;
 }
 
 @media only screen and (min-width: 768px) {
-    #infoGrid {
+    #topGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
